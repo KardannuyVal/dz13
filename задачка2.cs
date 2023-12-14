@@ -6,13 +6,13 @@ namespace AsyncFactorialExample
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите число:");
+            Console.WriteLine("Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г®:");
             int number = int.Parse(Console.ReadLine());
             Task<int> factorialTask = CalculateFactorialAsync(number);
             int square = CalculateSquare(number);
             factorialTask.Wait();
-            Console.WriteLine("Факториал числа {0}: {1}", number, factorialTask.Result);
-            Console.WriteLine("Квадрат числа {0}: {1}", number, square);
+            Console.WriteLine("Г”Г ГЄГІГ®Г°ГЁГ Г« Г·ГЁГ±Г«Г  {0}: {1}", number, factorialTask.Result);
+            Console.WriteLine("ГЉГўГ Г¤Г°Г ГІ Г·ГЁГ±Г«Г  {0}: {1}", number, square);
         }
         static async Task<int> CalculateFactorialAsync(int number)
         {
